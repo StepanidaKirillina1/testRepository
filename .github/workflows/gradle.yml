@@ -36,6 +36,4 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle Wrapper
-      env:
-        SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
-      run: ./gradlew clean test
+      run: ./gradlew clean test -DremoteUrl=http://localhost:4444/wd/hub

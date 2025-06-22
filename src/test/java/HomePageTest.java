@@ -23,7 +23,7 @@ public class HomePageTest {
     @BeforeEach
     public void setUp() {
         driver = initDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @AfterEach

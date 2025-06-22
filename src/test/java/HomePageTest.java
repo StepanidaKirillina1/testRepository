@@ -41,7 +41,7 @@ public class HomePageTest {
             options.addArguments("--headless");  // Add headless mode
             options.addArguments("--disable-gpu"); // Switch off GPU, because we don't need it in headless mode
             options.addArguments("--no-sandbox"); // Switch off sandbox to prevent access rights issues
-            options.addArguments("--disable-dev-shm-usage"); // Use /tmp instead of /dev/shm
+            options.addArguments("--disable-dev-shm-usage");
             options.setCapability("goog:loggingPrefs", Map.of("browser", "ALL"));
             try {
                 driver = new RemoteWebDriver(new URL(remoteUrl), options);

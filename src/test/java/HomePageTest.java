@@ -5,6 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -61,5 +62,13 @@ public class HomePageTest {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
 
         Assertions.assertEquals("Hands-On Selenium WebDriver with Java", driver.getTitle());
+    }
+
+    @Test
+    public void testWebForm() {
+        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
+
+        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
     }
 }

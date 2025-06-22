@@ -24,6 +24,7 @@ public class HomePageTest {
     public void setUp() {
         driver = initDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
     }
 
     @AfterEach
@@ -59,22 +60,18 @@ public class HomePageTest {
 
     @Test
     public void testTitle() {
-        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
-
         Assertions.assertEquals("Hands-On Selenium WebDriver with Java", driver.getTitle());
     }
 
     @Test
     public void testWebForm() {
-        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
         driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
 
         Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
     }
 
     @Test
-    public void testNavigation() {
-        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+    public void testWebForm2() {
         driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
 
         Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());

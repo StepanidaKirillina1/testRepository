@@ -23,7 +23,7 @@ public class HomePageTest {
     @BeforeEach
     public void setUp() {
         driver = initDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @AfterEach
@@ -66,6 +66,14 @@ public class HomePageTest {
 
     @Test
     public void testWebForm() {
+        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
+
+        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
+    }
+
+    @Test
+    public void testNavigation() {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
         driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
 

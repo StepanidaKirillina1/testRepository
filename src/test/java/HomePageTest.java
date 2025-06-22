@@ -75,8 +75,8 @@ public class HomePageTest {
     @Test
     public void testNavigation() {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
-        driver.findElement(By.cssSelector("a[href='navigation1.html']")).click();
+        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
 
-        Assertions.assertEquals("Navigation example", driver.findElement(By.cssSelector("h1.display-6")).getText());
+        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
     }
 }

@@ -1,3 +1,5 @@
+import config.TestPropertiesConfig;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,12 +17,13 @@ import java.util.Map;
 
 public class HomePageTest {
     WebDriver driver;
+    TestPropertiesConfig config = ConfigFactory.create(TestPropertiesConfig.class, System.getProperties());
 
     @BeforeEach
     public void setUp() {
         driver = initDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+        driver.get(config.getBaseUrl());
     }
 
     @AfterEach

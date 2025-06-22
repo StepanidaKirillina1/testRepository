@@ -48,6 +48,9 @@ public class HomePageTest {
             } catch (MalformedURLException e) {
                 throw new RuntimeException("Malformed URL for Selenium Remote WebDriver", e);
             }
+        } else {
+            Allure.addAttachment("Local run", "No remote driver");
+            driver = new ChromeDriver();
         }
         driver.manage().window().maximize();
         return driver;

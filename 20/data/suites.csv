@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jun 22 07:49:07 GMT 2025","Sun Jun 22 07:49:08 GMT 2025","683","","HomePageTest","","HomePageTest","testWebForm","testWebForm()",""
-"passed","Sun Jun 22 07:49:07 GMT 2025","Sun Jun 22 07:49:07 GMT 2025","750","","HomePageTest","","HomePageTest","testWebForm2","testWebForm2()",""
-"passed","Sun Jun 22 07:49:05 GMT 2025","Sun Jun 22 07:49:07 GMT 2025","1758","","HomePageTest","","HomePageTest","testTitle","testTitle()",""
+"passed","Sun Jun 22 07:49:07 GMT 2025","Sun Jun 22 07:49:09 GMT 2025","1824","","HomePageTest","","HomePageTest","testTitle","testTitle()",""
+"passed","Sun Jun 22 07:49:10 GMT 2025","Sun Jun 22 07:49:11 GMT 2025","663","","HomePageTest","","HomePageTest","testWebForm","testWebForm()",""
+"passed","Sun Jun 22 07:49:09 GMT 2025","Sun Jun 22 07:49:10 GMT 2025","783","","HomePageTest","","HomePageTest","testWebForm2","testWebForm2()",""

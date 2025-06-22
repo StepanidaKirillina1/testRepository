@@ -31,6 +31,6 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run tests with remote Chrome
-        run: ./gradlew clean test -DremoteUrl=http://localhost:4444/wd/hub -Denv=dev
+        run: ./gradlew clean test -DremoteUrl=http://localhost:4444/wd/hub
 
   

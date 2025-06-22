@@ -1,6 +1,3 @@
-import config.TestPropertiesConfig;
-import io.qameta.allure.Allure;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,7 +15,6 @@ import java.util.Map;
 
 public class HomePageTest {
     WebDriver driver;
-    TestPropertiesConfig configProperties = ConfigFactory.create(TestPropertiesConfig.class, System.getProperties());
 
     @BeforeEach
     public void setUp() {
@@ -34,11 +30,9 @@ public class HomePageTest {
 
     private WebDriver initDriver() {
         String remoteUrl = System.getenv("SELENIUM_REMOTE_URL");
-        if (remoteUrl == null || remoteUrl.isEmpty()) {
-            remoteUrl = configProperties.getSeleniumRemoteUrl();
-        }
-        if (remoteUrl != null) {
-            Allure.addAttachment("RemoteUrl", remoteUrl);
+        System.out.println("remote url " + remoteUrl);
+
+        if (remoteUrl != null && !remoteUrl.isEmpty()) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");  // Add headless mode
             options.addArguments("--disable-gpu"); // Switch off GPU, because we don't need it in headless mode
@@ -51,10 +45,8 @@ public class HomePageTest {
                 throw new RuntimeException("Malformed URL for Selenium Remote WebDriver", e);
             }
         } else {
-            Allure.addAttachment("Local run", "No remote driver");
             driver = new ChromeDriver();
         }
-        driver.manage().window().maximize();
         return driver;
     }
 

@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
 })
 public interface TestPropertiesConfig extends Config {
     @Key("baseUrl")
-    @DefaultValue("https://bonigarcia.dev/selenium-webdriver-java/")
+    //@DefaultValue("https://bonigarcia.dev/selenium-webdriver-java/")
     String getBaseUrl();
 
     @Key("username")

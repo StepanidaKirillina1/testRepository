@@ -50,7 +50,8 @@ jobs:
       - name: Run tests on ${{ matrix.environment }}
         env:
           SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
-        run: ./gradlew clean test -Denv=${{ matrix.environment }}
+          BASE_URL: ${{ secrets.BASE_URL }}
+        run: ./gradlew clean test -Denv=${{ matrix.environment }} -DbaseUrl=$BASE_URL
 
       # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
       # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.

@@ -68,7 +68,8 @@ public class HomePageTest {
     }
 
     @Test
-    public void testDropDownPage() {
+    public void testDropDownPage() throws InterruptedException {
+        Thread.sleep(6000);
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='dropdown-menu.html']")))
                 .click();

@@ -63,4 +63,11 @@ public class HomePageTest {
 
         Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
     }
+
+    @Test
+    public void testNavigationPage() {
+        driver.findElement(By.cssSelector("a[href='navigation1.html']")).click();
+
+        Assertions.assertEquals("Navigation example", driver.findElement(By.cssSelector("h1.display-6")).getText());
+    }
 }

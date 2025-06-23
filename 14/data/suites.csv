@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jun 22 02:49:31 GMT 2025","Sun Jun 22 02:49:32 GMT 2025","856","","HomePageTest","","HomePageTest","testWebForm","testWebForm()",""
-"broken","Sun Jun 22 02:49:32 GMT 2025","Sun Jun 22 02:49:34 GMT 2025","1686","","HomePageTest","","HomePageTest","testNavigation","testNavigation()",""
-"passed","Sun Jun 22 02:49:29 GMT 2025","Sun Jun 22 02:49:31 GMT 2025","2002","","HomePageTest","","HomePageTest","testTitle","testTitle()",""

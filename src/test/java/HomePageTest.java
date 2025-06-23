@@ -68,11 +68,11 @@ public class HomePageTest {
     }
 
     @Test
-    public void testNavigationPage() {
+    public void testDropDownPage() {
         new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='navigation1.html']")))
+                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='dropdown-menu.html']")))
                 .click();
 
-        Assertions.assertEquals("Navigation example", driver.findElement(By.cssSelector("h1.display-6")).getText());
+        Assertions.assertEquals("Dropdown menu", driver.findElement(By.cssSelector("h1.display-6")).getText());
     }
 }

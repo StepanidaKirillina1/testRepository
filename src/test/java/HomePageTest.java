@@ -9,6 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -59,6 +62,13 @@ public class HomePageTest {
 
     @Test
     public void testWebForm() {
+        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
+
+        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
+    }
+
+    @Test
+    public void testDropDownPage() throws InterruptedException {
         driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
 
         Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());

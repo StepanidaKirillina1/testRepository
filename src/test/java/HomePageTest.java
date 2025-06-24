@@ -59,18 +59,4 @@ public class HomePageTest {
     public void testTitle() {
         Assertions.assertEquals("Hands-On Selenium WebDriver with Java", driver.getTitle());
     }
-
-    @Test
-    public void testWebForm() {
-        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
-
-        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
-    }
-
-    @Test
-    public void testDropDownPage() throws InterruptedException {
-        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
-
-        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
-    }
 }

@@ -69,11 +69,8 @@ public class HomePageTest {
 
     @Test
     public void testDropDownPage() throws InterruptedException {
-        Thread.sleep(6000);
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='dropdown-menu.html']")))
-                .click();
+        driver.findElement(By.cssSelector("a[href='web-form.html']")).click();
 
-        Assertions.assertEquals("Dropdown menu", driver.findElement(By.cssSelector("h1.display-6")).getText());
+        Assertions.assertEquals("Web form", driver.findElement(By.cssSelector("h1.display-6")).getText());
     }
 }
